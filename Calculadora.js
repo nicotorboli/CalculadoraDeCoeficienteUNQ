@@ -65,20 +65,5 @@ document.addEventListener("DOMContentLoaded", () => {
     // Cargar carreras al iniciar
     cargarCarreras();
 
-
-    document.addEventListener("DOMContentLoaded", () => {
-        // Referencias de elementos
-        const helpBtn = document.getElementById("helpBtn");
-        const helpContent = document.getElementById("helpContent");
-    
-        // Mostrar u ocultar el contenido de ayuda
-        helpBtn.addEventListener("click", () => {
-            if (helpContent.style.display === "none" || helpContent.style.display === "") {
-                helpContent.style.display = "block";
-            } else {
-                helpContent.style.display = "none";
-            }
-        });
-    });
 });
 
