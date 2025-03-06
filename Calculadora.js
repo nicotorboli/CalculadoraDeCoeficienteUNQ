@@ -21,7 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Llenar el select con las carreras
     function llenarSelectCarreras() {
         selectCarrera.innerHTML = '<option value="">Seleccionar carrera</option>';
-        Object.keys(carreras).forEach(carrera => {
+        // Sort the careers alphabetically
+        const sortedCarreras = Object.keys(carreras).sort();
+    
+        sortedCarreras.forEach(carrera => {
             const option = document.createElement("option");
             option.value = carrera;
             option.textContent = carrera;
@@ -63,6 +66,3 @@ document.addEventListener("DOMContentLoaded", () => {
     cargarCarreras();
 });
 
-fetch("Carreras.json")
-    .then(response => console.log(response))
-    .catch(error => console.error("Error al cargar JSON:", error));
