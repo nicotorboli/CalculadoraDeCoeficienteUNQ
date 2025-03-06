@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Coeficiente</title>
+    <link rel="stylesheet" href="Calculadora.css"> 
+</head>
+<body>
+
+    <div class="container">
+        <h1>Calculadora de Coeficiente</h1>
+
+        <div class="form-group">
+            <label for="carrera">Selecciona tu carrera:</label>
+            <select id="carrera">
+                <option value="">Cargando carreras...</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="credits">Créditos obtenidos:</label>
+            <input type="number" id="credits" placeholder="Ingrese los créditos obtenidos">
+        </div>
+
+        <div class="form-group">
+            <label for="average">Promedio:</label>
+            <input type="number" id="average" placeholder="Ingrese el promedio de notas" step="0.01">
+        </div>
+
+        <button id="calculateBtn">Calcular Coeficiente</button>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script src="Calculadora.js"></script>
+</body>
+</html>
