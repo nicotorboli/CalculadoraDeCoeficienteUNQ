@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Llenar el select con las carreras
     function llenarSelectCarreras() {
         selectCarrera.innerHTML = '<option value="">Seleccionar carrera</option>';
-        // Sort the careers alphabetically
+        // Ordenar las carreras alfabéticamente
         const sortedCarreras = Object.keys(carreras).sort();
     
         sortedCarreras.forEach(carrera => {
