@@ -4,16 +4,46 @@ body {
     margin: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Cambié la alineación para que se ajuste mejor al contenido */
     height: 100vh;
+    padding: 20px; /* Agregué algo de espacio alrededor */
 }
 
 .container {
+    display: flex; /* Para crear las dos columnas */
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px; /* Limitar el ancho máximo */
+}
+
+.steps {
+    background-color: #94283b;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px; /* Definir un ancho fijo para la columna de pasos */
+    margin-right: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.steps h2 {
+    text-align: center;
+}
+
+.steps ul {
+    padding-left: 20px;
+}
+
+.steps li {
+    margin: 10px 0;
+}
+
+.form-container {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
+    flex: 1; /* Esto hará que el formulario ocupe el resto del espacio disponible */
 }
 
 h1 {
@@ -65,3 +95,22 @@ button:hover {
     font-size: 14px;
 }
 
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el apartado de contacto */
+.contact {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.contact a {
+    color: #0066cc;
+}

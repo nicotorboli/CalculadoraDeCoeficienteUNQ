@@ -9,28 +9,47 @@
 <body>
 
     <div class="container">
-        <h1>Calculadora de Coeficiente</h1>
-
-        <div class="form-group">
-            <label for="carrera">Selecciona tu carrera:</label>
-            <select id="carrera">
-                <option value="">Cargando carreras...</option>
-            </select>
+        <!-- Sección de pasos -->
+        <div class="steps">
+            <h2>Pasos para obtener el coeficiente:</h2>
+            <ul>
+                <li>1. <a href="https://acceso.uvq.edu.ar/simplesaml/module.php/core/loginuserpass.php?AuthState=_9ba7e9034d0351836a5741bb705a0fc792d7cad1dd%3Ahttps%3A%2F%2Facceso.uvq.edu.ar%2Fsimplesaml%2Fsaml2%2Fidp%2FSSOService.php%3Fspentityid%3Dhttps%253A%252F%252Fautogestion.uvq.edu.ar%252Funq%252Facceso%26cookieTime%3D1741302922%26RelayState%3Dhttps%253A%252F%252Fautogestion.uvq.edu.ar%252Funq%252Facceso%253Fauth%253Dsaml" target="_blank">Ingresa al SIU Guaraní de la UNQ</a>.</li>
+                <li>2. Ve al apartado de <strong>Reportes</strong>.</li>
+                <li>3. Selecciona la opción de <strong>Estado del recorrido académico</strong>.</li>
+                <li>4. Obtén los datos de las columnas <strong>Créditos Obtenidos</strong> y <strong>Promedio General</strong>.</li>
+            </ul>
         </div>
 
-        <div class="form-group">
-            <label for="credits">Créditos obtenidos:</label>
-            <input type="number" id="credits" placeholder="Ingrese los créditos obtenidos">
+        <!-- Sección del formulario -->
+        <div class="form-container">
+            <h1>Calculadora de Coeficiente</h1>
+
+            <div class="form-group">
+                <label for="carrera">Selecciona tu carrera:</label>
+                <select id="carrera">
+                    <option value="">Cargando carreras...</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="credits">Créditos obtenidos:</label>
+                <input type="number" id="credits" placeholder="Ingrese los créditos obtenidos">
+            </div>
+
+            <div class="form-group">
+                <label for="average">Promedio:</label>
+                <input type="number" id="average" placeholder="Ingrese el promedio de notas" step="0.01">
+            </div>
+
+            <button id="calculateBtn">Calcular Coeficiente</button>
+
+            <div class="result" id="result"></div>
         </div>
+    </div>
 
-        <div class="form-group">
-            <label for="average">Promedio:</label>
-            <input type="number" id="average" placeholder="Ingrese el promedio de notas" step="0.01">
-        </div>
-
-        <button id="calculateBtn">Calcular Coeficiente</button>
-
-        <div class="result" id="result"></div>
+    <!-- Sección de contacto -->
+    <div class="contact">
+        <p>Ante cualquier error, por favor contactarse con: <a href="mailto:nicotorboli1@gmail.com">nicotorboli1@gmail.com</a></p>
     </div>
 
     <script src="Calculadora.js"></script>
