@@ -3,17 +3,21 @@ body {
     background-color: #f4f4f9;
     margin: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Cambié la alineación para que se ajuste mejor al contenido */
-    height: 100vh;
-    padding: 20px; /* Agregué algo de espacio alrededor */
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .container {
-    display: flex; /* Para crear las dos columnas */
+    display: flex;
     flex-direction: row;
     width: 100%;
-    max-width: 1200px; /* Limitar el ancho máximo */
+    max-width: 1200px;
+    gap: 20px; /* Espacio entre las columnas */
+    margin-bottom: 20px; /* Espacio antes del contacto */
 }
 
 .steps {
@@ -21,8 +25,7 @@ body {
     color: white;
     padding: 20px;
     border-radius: 8px;
-    width: 300px; /* Definir un ancho fijo para la columna de pasos */
-    margin-right: 20px;
+    width: 30%; /* Ancho relativo */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -43,7 +46,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex: 1; /* Esto hará que el formulario ocupe el resto del espacio disponible */
+    width: 70%; /* Ancho relativo */
 }
 
 h1 {
@@ -107,10 +110,28 @@ a:hover {
 /* Estilos para el apartado de contacto */
 .contact {
     text-align: center;
-    margin-top: 20px;
     font-size: 16px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.contact a {
-    color: #0066cc;
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding-right: 40px;
+
+    }
+
+    .steps, .form-container {
+        width: 100%; /* Ocupar todo el ancho en pantallas pequeñas */
+    }
+
+    .steps {
+        margin-bottom: 20px; /* Espacio entre las secciones en móvil */
+    }
 }
